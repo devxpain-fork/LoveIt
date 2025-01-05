@@ -9,8 +9,8 @@ authorLink: "https://dillonzq.com"
 description: "Hugo 提供了多个内置的 Shortcodes, 以方便作者保持 Markdown 内容的整洁."
 images: []
 resources:
-- name: "featured-image"
-  src: "featured-image.png"
+  - name: "featured-image"
+    src: "featured-image.png"
 
 tags: ["shortcodes"]
 categories: ["documentation"]
@@ -50,10 +50,10 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 
 ```html
 <figure>
-    <img src="/images/lighthouse.jpg"/>
-    <figcaption>
-        <h4>Lighthouse (figure)</h4>
-    </figcaption>
+  <img src="/images/lighthouse.jpg" />
+  <figcaption>
+    <h4>Lighthouse (figure)</h4>
+  </figcaption>
 </figure>
 ```
 
@@ -74,7 +74,10 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 输出的 HTML 看起来像这样:
 
 ```html
-<script type="application/javascript" src="https://gist.github.com/spf13/7896402.js"></script>
+<script
+  type="application/javascript"
+  src="https://gist.github.com/spf13/7896402.js"
+></script>
 ```
 
 ## 3 highlight
@@ -85,6 +88,7 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 
 ```markdown
 {{</* highlight html */>}}
+
 <section id="main">
     <div>
         <h1 id="title">{{ .Title }}</h1>
@@ -99,6 +103,7 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 呈现的输出效果如下:
 
 {{< highlight html >}}
+
 <section id="main">
     <div>
         <h1 id="title">{{ .Title }}</h1>
@@ -144,12 +149,12 @@ For more information please have a look at GitHub issue [#7879](https://github.c
 一个 `tweet` 示例:
 
 ```markdown
-{{</* tweet 917359331535966209 */>}}
+{{</* tweet user="GoHugoIO" id="917359331535966209" */>}}
 ```
 
 呈现的输出效果如下:
 
-{{< tweet 917359331535966209 >}}
+{{< tweet user="GoHugoIO" id="917359331535966209" >}}
 
 ## 8 vimeo
 
